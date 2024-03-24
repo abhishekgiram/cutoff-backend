@@ -50,7 +50,7 @@ router.post('/getByMarks/', async (req, res) => {
     try {
    const inputValue = {
             score :  { $lte:  req.body.score } ,
-            //caste: req.body.caste, capRound: req.body.capRound
+            caste: req.body.caste, capRound: req.body.capRound
             } 
             console.log(inputValue)
          const data = await CutOffs.find(inputValue);
